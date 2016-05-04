@@ -10,8 +10,8 @@ import 'package:angular2_getting_started/heroes/hero_service.dart';
     <ul>
         <li *ngFor="let h of heroes">{{h}}</li>
     </ul>
-    '''
-)
+    {{heroes}}
+    ''')
 class HeroListComponent {
     List<Hero> heroes;
 

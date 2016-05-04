@@ -1,6 +1,6 @@
 import 'package:angular2/core.dart';
 import 'logger_service.dart';
-import 'heroes/hero_component.dart';
+import 'heroes/heroes_component.dart';
 
 @Component(
     selector: 'my-app',

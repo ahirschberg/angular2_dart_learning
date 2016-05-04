@@ -1,6 +1,6 @@
 import 'package:angular2/core.dart';
 
-import 'hero.dart';
+import 'package:angular2_getting_started/heroes/hero.dart';
 
 List<String> _powers = const [
   "Super smart",

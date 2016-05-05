@@ -1,20 +1,29 @@
 import 'package:angular2/core.dart';
 
-import 'package:angular2_getting_started/heroes/hero.dart';
-import 'package:angular2_getting_started/heroes/hero_service.dart';
+import 'hero.dart';
+import 'hero_service.dart';
 
 @Component(
     selector: 'hero-list',
     template: '''
-    <h3>List</h3>
-    <ul>
+    <h3>{{heroes.length}} Hero{{heroes.length != 1 ? 'es' : ''}} to save the day!</h3>
+    <ul [class.auth]="auth">
         <li *ngFor="let h of heroes">{{h}}</li>
     </ul>
-    {{heroes}}
-    ''')
+    ''',
+    styles: const ['''
+      :host {
+      display: block;
+      }
+      .auth {
+        background-color: lightgreen;
+      }
+    '''])
 class HeroListComponent {
-    List<Hero> heroes;
-
-    HeroListComponent(HeroService heroService)
-        : heroes = heroService.getHeroes();
+  List<Hero> heroes;
+  bool auth;
+  HeroListComponent(HeroService heroService) {
+    heroes = heroService.getHeroes();
+    auth = heroService.isAuthorized;
+  }
 }

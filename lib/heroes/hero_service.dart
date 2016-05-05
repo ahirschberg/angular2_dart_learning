@@ -10,13 +10,13 @@ class HeroService {
   ];
 
   final Logger _logger;
-  final bool _isAuthorized;
+  final bool isAuthorized;
 
-  HeroService(this._logger, this._isAuthorized);
+  HeroService(this._logger, this.isAuthorized);
 
   List<Hero> getHeroes() {
     _logger.log('Getting heroes for ${_authStatus()} user...');
-    return _heroes.where((hero) => _isAuthorized || !hero.isSecret).toList();
+    return _heroes;
   }
 
   void addHero(Hero hero) {
@@ -25,7 +25,7 @@ class HeroService {
     _logger.log('List is now $_heroes');
   }
 
-  String _authStatus() => _isAuthorized
+  String _authStatus() => isAuthorized
         ? 'authorized'
         : 'unauthorized';
 }

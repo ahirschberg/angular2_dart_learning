@@ -16,18 +16,18 @@ List<String> _powers = const [
 )
 class HeroFormComponent {
   HeroService heroService;
+  final submitRequest = new EventEmitter<Hero>();
 
   HeroFormComponent(this.heroService);
 
   List<String> get powers => _powers;
-  bool submitted = false;
   Hero model = new Hero(18, 'Dr IQ', _powers[1], 'Chuck Overstreet');
   String get diagnostic => 'DIAGNOSTIC: $model'; // TODO remove
 
-  onSubmit() {
-    print('submitting!');
+  void onSubmit() {
+    submitRequest.emit(model);
     heroService.addHero(model);
-    model = new Hero(new Random().nextInt(100), 'Joe', '');
-    submitted = true;
+    print('submitting!');
+    model = new Hero(new Random().nextInt(100), '', '');
   }
 }

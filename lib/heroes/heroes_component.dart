@@ -1,8 +1,9 @@
 import 'package:angular2/core.dart';
 
-import 'package:angular2_getting_started/heroes/hero_service_provider.dart';
-import 'package:angular2_getting_started/heroes/hero_form_component.dart';
-import 'package:angular2_getting_started/heroes/hero_list_component.dart';
+import 'hero_service_provider.dart';
+import 'hero_form_component.dart';
+import 'hero_list_component.dart';
+import 'hero.dart';
 
 @Component(
     selector: 'my-heroes',

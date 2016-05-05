@@ -5,20 +5,21 @@
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" required
-                [(ngModel)]="model.name">
+                [(ngModel)]="model.name" ngControl="name">
         </div>
         <div class="form-group">
             <label for="alterEgo">Alter Ego</label>
             <input type="text" class="form-control" required
-                   [(ngModel)]="model.alterEgo">
+                   [(ngModel)]="model.alterEgo" ngControl="alt_ego">
         </div>
         <div class="form-group">
             <label for="power">Hero Power</label>
             <select class="form-control" required
-                    [(ngModel)]="model.power">
+                    [(ngModel)]="model.power" ngControl="power">
                 <option *ngFor="let p of powers" [value]="p">{{p}}</option>
             </select>
         </div>
         <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
     </form>
+    {{heroService.getHeroes()}}
 </div>

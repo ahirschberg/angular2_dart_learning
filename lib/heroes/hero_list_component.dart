@@ -13,10 +13,14 @@ import 'hero_service.dart';
     ''',
     styles: const ['''
       :host {
-      display: block;
+        display: block;
       }
-      .auth {
+      ul:not(.auth) {
+        background-color: #FFC1C1;
+      }
+      ul.auth {
         background-color: lightgreen;
+        border-radius: 2px;
       }
     '''])
 class HeroListComponent {

@@ -1,7 +1,4 @@
-<div class="container">
-    <h1>Hero Form</h1>
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
-        {{diagnostic}}
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" required
@@ -21,5 +18,3 @@
         </div>
         <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
     </form>
-    {{heroService.getHeroes()}}
-</div>

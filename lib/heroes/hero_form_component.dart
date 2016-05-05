@@ -22,10 +22,9 @@ class HeroFormComponent {
 
   List<String> get powers => _powers;
   Hero model = new Hero(18, 'Dr IQ', _powers[1], 'Chuck Overstreet');
-  String get diagnostic => 'DIAGNOSTIC: $model'; // TODO remove
 
   void onSubmit() {
-    submitRequest.emit(model);
+    submitRequest.emit(model); // doesn't work???
     heroService.addHero(model);
     print('submitting!');
     model = new Hero(new Random().nextInt(100), '', '');

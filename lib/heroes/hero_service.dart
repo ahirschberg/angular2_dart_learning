@@ -22,7 +22,6 @@ class HeroService {
   void addHero(Hero hero) {
     _logger.log('${_authStatus()} user adding $hero');
     _heroes.add(hero);
-    _logger.log('List is now $_heroes');
   }
 
   String _authStatus() => isAuthorized

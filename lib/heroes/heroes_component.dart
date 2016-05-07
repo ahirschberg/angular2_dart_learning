@@ -15,5 +15,5 @@ import 'hero_list_component.dart';
     providers: const [heroServiceProvider],
     directives: const [HeroFormComponent, HeroListComponent])
 class HeroesComponent {
-  void log(String msg) => print(msg); // never called???
+  void log(String msg) => print('log: $msg');
 }

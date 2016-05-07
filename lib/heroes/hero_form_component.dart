@@ -16,7 +16,7 @@ List<String> _powers = const [
 )
 class HeroFormComponent {
   HeroService heroService;
-  final submitRequest = new EventEmitter<Hero>();
+  @Output() final submitRequest = new EventEmitter<Hero>();
 
   HeroFormComponent(this.heroService);
 
@@ -24,7 +24,7 @@ class HeroFormComponent {
   Hero model = new Hero(18, 'Dr IQ', _powers[1], 'Chuck Overstreet');
 
   void onSubmit() {
-    submitRequest.emit(model); // doesn't work???
+    submitRequest.emit(model);
     heroService.addHero(model);
     print('submitting!');
     model = new Hero(new Random().nextInt(100), '', '');

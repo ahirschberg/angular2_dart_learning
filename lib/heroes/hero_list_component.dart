@@ -11,6 +11,7 @@ import 'hero_service.dart';
         <li *ngFor="let h of heroes">{{h}}</li>
     </ul>
     ''',
+//    changeDetection: ChangeDetectionStrategy.CheckOnce, // uncommenting this causes the list to not update!
     styles: const ['''
       :host {
         display: block;

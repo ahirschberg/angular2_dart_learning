@@ -2,7 +2,6 @@ import 'package:angular2/core.dart';
 import 'dart:math';
 
 import 'package:angular2_getting_started/heroes/hero.dart';
-import 'package:angular2_getting_started/heroes/hero_service.dart';
 
 List<String> _powers = const [
   "Super smart",
@@ -15,18 +14,13 @@ List<String> _powers = const [
     templateUrl: 'hero_form_component.html'
 )
 class HeroFormComponent {
-  HeroService heroService;
-  @Output() final submitRequest = new EventEmitter<Hero>();
-
-  HeroFormComponent(this.heroService);
+  @Output() final EventEmitter<Hero> submitRequest = new EventEmitter<Hero>();
 
   List<String> get powers => _powers;
   Hero model = new Hero(18, 'Dr IQ', _powers[1], 'Chuck Overstreet');
 
   void onSubmit() {
     submitRequest.emit(model);
-    heroService.addHero(model);
-    print('submitting!');
     model = new Hero(new Random().nextInt(100), '', '');
   }
 }

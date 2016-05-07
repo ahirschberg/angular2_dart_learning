@@ -1,20 +1,27 @@
+    <p style="font-style: italic;">Preview {{model}}</p>
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" required
-                [(ngModel)]="model.name" ngControl="name">
+                [(ngModel)]="model.name" ngControl="name" #name="ngForm">
+            <div [hidden]="name.valid" class="alert alert-danger">Must provide a name!</div>
         </div>
         <div class="form-group">
             <label for="alterEgo">Alter Ego</label>
-            <input type="text" class="form-control" required
-                   [(ngModel)]="model.alterEgo" ngControl="alt_ego">
+            <input type="text" class="form-control"
+                   pattern="^((\w+ )+\w+)?\W*$"
+                   [(ngModel)]="model.alterEgo" ngControl="alt_ego" #alt_ego="ngForm">
+            <div [hidden]="alt_ego.valid" class="alert alert-danger">
+                Alter ego must be empty or be a first and last name!
+            </div>
         </div>
         <div class="form-group">
             <label for="power">Hero Power</label>
             <select class="form-control" required
-                    [(ngModel)]="model.power" ngControl="power">
+                    [(ngModel)]="model.power" ngControl="power" #power="ngForm">
                 <option *ngFor="let p of powers" [value]="p">{{p}}</option>
             </select>
+            <div [hidden]="power.valid" class="alert alert-danger">Must provide a power!</div>
         </div>
         <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
     </form>

@@ -8,7 +8,10 @@ import 'hero_service.dart';
     template: '''
     <h3>{{heroes.length}} Hero{{heroes.length != 1 ? 'es' : ''}} to save the day!</h3>
     <ul [class.auth]="auth">
-        <li *ngFor="let h of heroes">{{h}}</li>
+      <li *ngFor="let h of heroes">
+        {{h}}
+        <button (click)="deleteHero.emit(h)">Delete</button>
+      </li>
     </ul>
     ''',
 //    changeDetection: ChangeDetectionStrategy.CheckOnce, // uncommenting this causes the list to not update!
@@ -27,6 +30,7 @@ import 'hero_service.dart';
 class HeroListComponent {
   List<Hero> heroes;
   bool auth;
+  @Output() final EventEmitter<Hero> deleteHero = new EventEmitter<Hero>();
   HeroListComponent(HeroService heroService) {
     heroes = heroService.getHeroes();
     auth = heroService.isAuthorized;

@@ -5,12 +5,12 @@ import '../logger_service.dart';
 @Injectable()
 class HeroService {
   List<Hero> _heroes = [
-    new Hero(10, "Fratberg", "being frat", "Alex", true),
-    new Hero(5, "Cpt. America", "shield", "Donald Trump", false)
+    new Hero("Fratberg", "being frat", "Alex", true),
+    new Hero("Cpt. America", "shield", "Donald Trump", false)
   ];
 
   final Logger _logger;
-  final bool isAuthorized;
+  bool isAuthorized;
 
   HeroService(this._logger, this.isAuthorized);
 

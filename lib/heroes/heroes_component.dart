@@ -10,6 +10,9 @@ import 'hero.dart';
     selector: 'my-heroes',
     template: '''
     <h1>Heroes</h1>
+    <button (click)="heroService.isAuthorized = !heroService.isAuthorized">
+      Authorized: {{heroService.isAuthorized}}
+    </button>
     <hero-form (submitRequest)="addHero(\$event)"></hero-form>
     <hero-list (deleteHero)="deleteHero(\$event)"></hero-list>
     ''',
@@ -20,7 +23,6 @@ class HeroesComponent {
 
   HeroesComponent(this.heroService);
 
-  void log(String msg) => print('log: $msg');
   bool deleteHero(Hero h) => heroService.getHeroes().remove(h);
   void addHero(Hero h) => heroService.addHero(h);
 

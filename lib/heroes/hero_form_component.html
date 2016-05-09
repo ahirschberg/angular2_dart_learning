@@ -25,7 +25,7 @@
         </div>
         <div class="form-group" *ngIf="heroService.isAuthorized">
             <label for="isSecret">Top Secret:</label>
-            <input type="button" ngControl="isSecret" [ngModel]="model.isSecret" (click)="model.isSecret=!model.isSecret">
+            <input type="button" class="btn btn-default" ngControl="isSecret" [ngModel]="model.isSecret" (click)="model.isSecret=!model.isSecret">
         </div>
         <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
     </form>

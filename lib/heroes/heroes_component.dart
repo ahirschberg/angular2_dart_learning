@@ -10,7 +10,9 @@ import 'hero.dart';
     selector: 'my-heroes',
     template: '''
     <h1>Heroes</h1>
-    <button (click)="heroService.isAuthorized = !heroService.isAuthorized">
+    <button class="btn btn-default"
+        [ngClass]="heroService.isAuthorized ? 'btn-info' : 'btn-danger'"
+        (click)="heroService.isAuthorized = !heroService.isAuthorized">
       Authorized: {{heroService.isAuthorized}}
     </button>
     <hero-form (submitRequest)="addHero(\$event)"></hero-form>

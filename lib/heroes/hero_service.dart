@@ -5,8 +5,11 @@ import '../logger_service.dart';
 @Injectable()
 class HeroService {
   List<Hero> _heroes = [
-    new Hero("Fratberg", "being frat", "Alex", true),
-    new Hero("Cpt. America", "shield", "Donald Trump", false)
+    new Hero("Fast Man", "Going fast", "Bill", true),
+    new Hero("Strong Man", "Very Strong", "Joe", true),
+    new Hero("Hard To See Man", "Transparent", "Dave", true),
+    new Hero("Underwater man", "Good at being underwater", "Cody", true),
+    new Hero("Average Man", "Your Average Man", "John", false)
   ];
 
   final Logger _logger;
@@ -15,7 +18,6 @@ class HeroService {
   HeroService(this._logger, this.isAuthorized);
 
   List<Hero> getHeroes() {
-    _logger.log('Getting heroes for ${_authStatus()} user...');
     return _heroes;
   }
 

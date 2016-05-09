@@ -21,7 +21,7 @@ class HeroFormComponent {
   HeroFormComponent(this.heroService);
 
   List<String> get powers => _powers;
-  Hero model = new Hero('Dr IQ', _powers[1], 'Chuck Overstreet');
+  Hero model = new Hero('Smart Man', _powers[0], 'Albert');
 
   void onSubmit() {
     submitRequest.emit(model);

@@ -2,6 +2,6 @@
 <ul [class.auth]="heroService.isAuthorized">
     <li *ngFor="let h of heroes | auth_filter:heroService.isAuthorized">
         {{h}}
-        <button class="pull-right" (click)="deleteHero.emit(h)">Delete</button>
+        <button class="pull-right btn btn-default btn-sm" (click)="deleteHero.emit(h)">Delete</button>
     </li>
 </ul>

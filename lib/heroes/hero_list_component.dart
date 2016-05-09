@@ -30,7 +30,12 @@ class AuthFilterPipe implements PipeTransform {
         border-radius: 2px;
       }
       li {
-        padding: 5px;
+        padding: 10px;
+      }
+      li:last-child::after {
+        content: " ";
+        display: block;
+        clear: both;
       }
     '''],
     pipes: const [AuthFilterPipe])

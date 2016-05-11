@@ -30,7 +30,7 @@
         "5": false
       },
       {
-        "1": "package:angular2_getting_started/app_component.dart",
+        "1": "package:angular2_dart_my_heroes_experimentation/app_component.dart",
         "5": false
       }
     ],
@@ -53,7 +53,7 @@
         "4": "i3"
       },
       {
-        "1": "package:angular2_getting_started/app_component.ngfactory.dart",
+        "1": "package:angular2_dart_my_heroes_experimentation/app_component.ngfactory.dart",
         "4": "i4"
       }
     ]
@@ -62,7 +62,7 @@
     "main": {
       "class": "Identifier",
       "name": "main",
-      "moduleUrl": "asset:angular2_getting_started/web/main.dart",
+      "moduleUrl": "asset:angular2_dart_my_heroes_experimentation/web/main.dart",
       "prefix": null,
       "value": null
     }

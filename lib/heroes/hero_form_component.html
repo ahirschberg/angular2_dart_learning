@@ -9,8 +9,8 @@
         <div class="form-group">
             <label for="alterEgo">Alter Ego</label>
             <input type="text" class="form-control"
-                   pattern="^((\w+ )+\w+)?\W*$"
-                   [(ngModel)]="model.alterEgo" ngControl="alt_ego" #alt_ego="ngForm">
+                   (ngModelChange)="model.alterEgo = properCase($event)"
+                   [ngModel]="model.alterEgo" ngControl="alt_ego" #alt_ego="ngForm">
             <div [hidden]="alt_ego.valid" class="alert alert-danger">
                 Alter ego must be empty or be a first and last name!
             </div>

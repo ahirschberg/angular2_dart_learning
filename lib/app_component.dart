@@ -14,7 +14,7 @@ import 'package:angular2_getting_started/heroes/hero_service_provider.dart';
     useAsDefault: true
   ),
   const Route(
-    path: '/hero/',
+    path: '/hero/:id',
     name: 'Detail',
     component: HeroDetailComponent
   )
@@ -23,7 +23,6 @@ import 'package:angular2_getting_started/heroes/hero_service_provider.dart';
 @Component(
   selector: 'my-app',
   template: '''
-  <a [routerLink]="['Detail']">Detail</a>
   <router-outlet></router-outlet>''',
 //  encapsulation: ViewEncapsulation.Native, // uncomment for native shadow dom on chrome!
   providers: const [Logger, heroServiceProvider],

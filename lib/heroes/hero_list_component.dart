@@ -1,4 +1,5 @@
 import 'package:angular2/core.dart';
+import 'package:angular2/router.dart';
 
 import 'hero.dart';
 import 'hero_service.dart';
@@ -41,10 +42,13 @@ class AuthFilterPipe implements PipeTransform {
     pipes: const [AuthFilterPipe])
 class HeroListComponent {
   HeroService heroService;
+  Router _router;
   List<Hero> heroes;
   @Output() final EventEmitter<Hero> deleteHero = new EventEmitter<Hero>();
-  HeroListComponent(HeroService heroService) {
-    this.heroService = heroService;
+  HeroListComponent(this.heroService, Router this._router) {
     heroes = heroService.getHeroes();
   }
+
+  gotoDetail(Hero h) =>
+    _router.navigate(['Detail', {'id': h.id.toString()}]);
 }

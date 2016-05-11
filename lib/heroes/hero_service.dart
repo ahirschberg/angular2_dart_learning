@@ -21,6 +21,10 @@ class HeroService {
     return _heroes;
   }
 
+  Hero getHero(int id) =>
+    getHeroes().firstWhere((Hero h) => h.id == id);
+
+
   void addHero(Hero hero) {
     _logger.log('${_authStatus()} user adding $hero');
     _heroes.add(hero);

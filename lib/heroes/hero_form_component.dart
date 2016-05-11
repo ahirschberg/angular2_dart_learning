@@ -27,4 +27,9 @@ class HeroFormComponent {
     submitRequest.emit(model);
     model = new Hero('', '');
   }
+
+  // broken if you were to type a matching letter not at the end of the field
+  String properCase(String s) {
+    return s.replaceAllMapped(new RegExp(r'\b([a-z])'), (Match m) => m.group(1).toUpperCase());
+  }
 }

@@ -1,6 +1,6 @@
 <h3>{{heroService.isAuthorized ? heroes.length : 'Some'}} Hero{{heroes.length != 1 ? 'es' : ''}} to save the day!</h3>
 <ul [class.auth]="heroService.isAuthorized">
-    <li *ngFor="let h of heroes | auth_filter:heroService.isAuthorized">
+    <li *ngFor="let h of heroes | auth_filter:heroService.isAuthorized" (click)="gotoDetail(h)">
         {{h}}
         <button class="pull-right btn btn-default btn-sm" (click)="deleteHero.emit(h)">Delete</button>
     </li>

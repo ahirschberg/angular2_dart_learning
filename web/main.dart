@@ -3,7 +3,7 @@ import 'package:angular2/platform/common.dart' show LocationStrategy, HashLocati
 import 'package:angular2/router.dart' show ROUTER_PROVIDERS;
 import 'package:angular2/core.dart' show provide;
 
-import 'package:angular2_getting_started/app_component.dart';
+import 'package:angular2_dart_my_heroes_experimentation/app_component.dart';
 
 main() {
   bootstrap(AppComponent, [

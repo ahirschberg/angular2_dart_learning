@@ -1,4 +1,4 @@
-import 'package:angular2_getting_started/heroes/hero.dart';
+import 'hero.dart';
 import 'package:angular2/core.dart';
 import '../logger_service.dart';
 

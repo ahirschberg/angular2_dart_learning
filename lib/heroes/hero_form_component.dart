@@ -1,7 +1,7 @@
 import 'package:angular2/core.dart';
 import 'dart:math';
 
-import 'package:angular2_getting_started/heroes/hero.dart';
+import 'hero.dart';
 import 'hero_service.dart';
 
 List<String> _powers = const [

@@ -4,7 +4,7 @@ import 'package:angular2/router.dart';
 import 'logger_service.dart';
 import 'heroes/heroes_component.dart';
 import 'heroes/hero_detail_component.dart';
-import 'package:angular2_getting_started/heroes/hero_service_provider.dart';
+import 'heroes/hero_service_provider.dart';
 
 @RouteConfig(const [
   const Route(

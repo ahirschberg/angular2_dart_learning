@@ -1,5 +1,5 @@
 import 'package:angular2/core.dart';
-import 'package:angular2_getting_started/logger_service.dart';
+import '../logger_service.dart';
 import 'hero_service.dart';
 
 const _isAuthorized = true;

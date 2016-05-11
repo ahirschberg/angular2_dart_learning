@@ -20,7 +20,7 @@ pushd "$F_BUILDS"
 git config push.default simple
 git checkout -B gh-pages # ensure we're on the correct branch
 git add .
-git commit -m "autobuilt latest" --dry-run
+git commit -m "autobuilt latest"
 git push
 popd
 

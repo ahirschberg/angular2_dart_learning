@@ -1,6 +1,6 @@
-name: angular2_getting_started
-description: Quickstart
-version: 0.0.1
+name: angular2_dart_my_heroes_experimentation
+description: Based off the angular quickstart guide, but with my own additions
+version: 1.0.0
 environment:
   sdk: '>=1.13.0 <2.0.0'
 dependencies:

@@ -23,21 +23,6 @@ class AuthFilterPipe implements PipeTransform {
       :host {
         display: block;
       }
-      ul:not(.auth) {
-        background-color: #E6E6E6;
-      }
-      ul.auth {
-        background-color: lightgreen;
-        border-radius: 2px;
-      }
-      li {
-        padding: 10px;
-      }
-      li:last-child::after {
-        content: " ";
-        display: block;
-        clear: both;
-      }
     '''],
     pipes: const [AuthFilterPipe])
 class HeroListComponent {

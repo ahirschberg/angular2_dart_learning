@@ -7,6 +7,29 @@
         "5": false
       },
       {
+        "1": "package:angular2/platform/common.dart",
+        "2": [
+          "LocationStrategy",
+          "HashLocationStrategy",
+          "APP_BASE_HREF"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular2/router.dart",
+        "2": [
+          "ROUTER_PROVIDERS"
+        ],
+        "5": false
+      },
+      {
+        "1": "package:angular2/core.dart",
+        "2": [
+          "provide"
+        ],
+        "5": false
+      },
+      {
         "1": "package:angular2_getting_started/app_component.dart",
         "5": false
       }
@@ -18,8 +41,20 @@
         "4": "i0"
       },
       {
-        "1": "package:angular2_getting_started/app_component.ngfactory.dart",
+        "1": "package:angular2/platform/common.ngfactory.dart",
         "4": "i1"
+      },
+      {
+        "1": "package:angular2/router.ngfactory.dart",
+        "4": "i2"
+      },
+      {
+        "1": "package:angular2/core.ngfactory.dart",
+        "4": "i3"
+      },
+      {
+        "1": "package:angular2_getting_started/app_component.ngfactory.dart",
+        "4": "i4"
       }
     ]
   },

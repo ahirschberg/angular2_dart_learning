@@ -8,11 +8,6 @@
       },
       {
         "1": "package:angular2/platform/common.dart",
-        "2": [
-          "LocationStrategy",
-          "HashLocationStrategy",
-          "APP_BASE_HREF"
-        ],
         "5": false
       },
       {
@@ -31,6 +26,13 @@
       },
       {
         "1": "package:angular2_dart_my_heroes_experimentation/app_component.dart",
+        "5": false
+      },
+      {
+        "1": "dart:html",
+        "2": [
+          "window"
+        ],
         "5": false
       }
     ],
